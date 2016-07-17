@@ -1,0 +1,123 @@
+@font-face {
+	font-family: 'Raleway';
+	src: url('../fonts/Raleway-Medium.eot');
+	src: local('Raleway Medium'), local('Raleway-Medium'),
+		url('../fonts/Raleway-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Medium.woff2') format('woff2'),
+		url('../fonts/Raleway-Medium.woff') format('woff'),
+		url('../fonts/Raleway-Medium.ttf') format('truetype'),
+		url('../fonts/Raleway-Medium.svg#Raleway-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face 
+	font-family: 'Ralway';
+	src: url('../font/Raleway-Bold.eot');
+	src: local('Ralewy Bold'), local('Raleway-Bold'),
+		url('../fonts/Raleway-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Raleway-Bold.woff2') format('woff2'),
+		url('../fonts/Raleway-Bold.woff') format('woff'),
+		url('../fonts/Raleway-Bold.ttf') format('truetype'),
+		url('../fonts/Raleway-Bold.svg#Raleway-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+/* ***** GENERAL ***** */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	width: 1050px;
+	margin: 0 auto;
+}
+.clearfix {
+	clear: both;
+	content: "";
+	display: table;
+}
+html {
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 500;
+}
+/* ***** COLORS ***** */
+.bc-green {
+	background-color: #00cfab;
+}
+.green {
+	color: #00cfab;
+}
+.f9 {
+	color: #f9f9f9;
+}
+.f1 {
+	color: #f1f1f1;
+}
+.e4 {
+	color: #e4e4e4;
+}
+.c2 {
+	color: #c2c2c2;
+}
+.color9 {
+	color: #999;
+}
+/* ***** HEADER ***** */
+header {
+	background-color: black;
+	height: 40px;
+}
+header .logo-header p {
+	text-transform: uppercase;
+	color: white;
+	float: left;
+}
+nav {
+	float: right;
+}
+nav ul {
+	text-transform: uppercase;
+	color: white;
+	list-style-type: none;	
+}
+nav ul li {
+	display: inline-block;
+}
+/* ***** CAROUSEL ***** */
+.carousel-section {
+	height: 496px; 
+		background: rgba(250, 250, 250, 1);
+	background: -moz-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(204, 206, 215, 1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250, 250, 250, 1)), color-stop(100%, rgba(204, 206, 215, 1)));
+	background: -webkit-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(204, 206, 215, 1) 100%);
+	background: -o-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(204, 206, 215, 1) 100%);
+	background: -ms-linear-gradient(top, rgba(250, 250, 250, 1) 0%, rgba(204, 206, 215, 1) 100%);
+	background: linear-gradient(to bottom, rgba(250, 250, 250, 1) 0%, rgba(204, 206, 215, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ccced7', endColorstr='#cacaca', GradientType=0 );
+}
+/* ***** GALLERY ***** */
+.gallery-section {
+	height: 352px;
+}
+/* ***** PRICE TABLE ***** */
+.price-section {
+	height: 768px;
+}
+/* ***** FORM ***** */
+.form-section {
+	height: 544px;
+}
+/* ***** FOOTER ***** */
+footer {
+	height: 80px;
+}
+footer .copyright {
+	float: left;
+}
+footer .logo-footer {
+	float: right;
+}
+footer .social-media {
+	float: right;
+}
