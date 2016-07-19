@@ -42,9 +42,6 @@ html {
 	font-weight: 500;
 }
 /* ***** COLORS ***** */
-.bc-green {
-	background-color: #00cfab;
-}
 .green {
 	color: #00cfab;
 }
@@ -66,6 +63,33 @@ html {
 .color9 {
 	color: #999;
 }
+<<<<<<< HEAD
+=======
+.black {
+	color: #000;
+}
+.white {
+	color: #fff;
+}
+.bc-green {
+	background-color: #00cfab;
+}
+.bc-f9 {
+	background-color: #f9f9f9;
+}
+.bc-f1 {
+	background-color: #f1f1f1;
+}
+.bc-e4 {
+	background-color: #e4e4e4;
+}
+.bc-c2 {
+	background-color: #c2c2c2;
+}
+.bc-color9 {
+	background-color: #999;
+}
+>>>>>>> Aktualizacja
 strong {
 	font-weight: bold;
 }
@@ -78,9 +102,11 @@ header .logo-header p {
 	text-transform: uppercase;
 	color: white;
 	float: left;
+	line-height: 40px;
 }
 nav {
 	float: right;
+	line-height: 40px;
 }
 nav ul {
 	text-transform: uppercase;
@@ -88,6 +114,7 @@ nav ul {
 	list-style-type: none;	
 }
 nav ul li {
+	width: 107px;
 	display: inline-block;
 }
 /* ***** CAROUSEL ***** */
@@ -125,7 +152,10 @@ section.carousel-section .carousel-text p {
 	text-align: center;
 }
 section.carousel-section .carousel-text button {
+<<<<<<< HEAD
 	/*background-color: #e92121;*/
+=======
+>>>>>>> Aktualizacja
 	border: none;
 	padding: 15px 32px;
 	text-align: center;
@@ -254,7 +284,11 @@ section.price-section h3 {
 	font-weight: bold;
 }
 .month {
+<<<<<<< HEAD
 	margin-top: 5px;
+=======
+	margin-top: 2px;
+>>>>>>> Aktualizacja
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -308,10 +342,14 @@ footer {
 }
 footer .copyright {
 	float: left;
+	line-height: 80px;
 }
 footer .logo-footer {
 	float: right;
+	text-transform: uppercase;
+	line-height: 80px;
 }
 footer .social-media {
 	float: right;
+	padding: 22px 63px 0 0;
 }
