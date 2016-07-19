@@ -48,9 +48,6 @@ html {
 .f9 {
 	color: #f9f9f9;
 }
-.bc-f9 {
-	background-color: #f9f9f9;
-}
 .f1 {
 	color: #f1f1f1;
 }
@@ -63,8 +60,6 @@ html {
 .color9 {
 	color: #999;
 }
-<<<<<<< HEAD
-=======
 .black {
 	color: #000;
 }
@@ -89,7 +84,6 @@ html {
 .bc-color9 {
 	background-color: #999;
 }
->>>>>>> Aktualizacja
 strong {
 	font-weight: bold;
 }
@@ -129,33 +123,57 @@ section.carousel-section {
 	background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(248,248,248,1) 25%, rgba(245,245,245,1) 50%, rgba(225,225,228,1) 75%, rgba(207,206,215,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#cfced7', GradientType=0 );
 }
+section.carousel-section .container {
+	position: relative;
+}
 section.carousel-section .carousel-image {
 	float: left;
 	width: 406px;
-	height: 496px;
+	position: relative;
+}
+section.carousel-section .carousel-image img {
+	transform: scale(1.3, 1.3);
+	margin: 110px 0 0 32px;
+}
+section.carousel-section .container::before {
+	content: "<";
+	font-size: 64px;
+	font-weight: normal;
+	color: #00cfab;
+	position: absolute;
+	top: 216px;
 }
 section.carousel-section .carousel-text {
 	float: left;
 	width: 644px;
-	height: 496px;
-	padding: 0 80px;
+	height: 240px;
+	margin-top: 128px;
+	padding: 0 96px;
+	text-align: center;
+	position: relative;
+}
+section.carousel-section .container::after {
+	content: ">";
+	font-size: 64px;
+	font-weight: normal;
+	color: #00cfab;
+	position: absolute;
+	top: 216px;
+	right: -2px;
 }
 section.carousel-section .carousel-text h1 {
 	font-size: 40px;
 	text-transform: uppercase;
 	font-weight: normal;
-	text-align: center;
+	height: 64px;
 }
 section.carousel-section .carousel-text p {
 	font-size: 14px;
 	line-height: 21px;
 	text-align: center;
+	height: 128px;
 }
 section.carousel-section .carousel-text button {
-<<<<<<< HEAD
-	/*background-color: #e92121;*/
-=======
->>>>>>> Aktualizacja
 	border: none;
 	padding: 15px 32px;
 	text-align: center;
@@ -169,18 +187,30 @@ section.carousel-section .carousel-text button {
 /* ***** GALLERY ***** */
 section.gallery-section {
 	height: 352px;
+	padding-top: 32px;
+}
+section.gallery-section .container {
+	position: relative;
 }
 section.gallery-section .gallery-image {
 	float: left;
+	margin-right: 45px;
+}
+section.gallery-section .gallery-image img {
 	width: 320px;
 	height: 224px;
-	margin-right: 45px;
 }		
 section.gallery-section .gallery-image h3 {
 	font-size: 16px;
+	line-height: 8px;
+	height: 32px;
 	font-weight: bold;
 	border-bottom: solid 7px #00cfab;
-	width: 160px;
+	width: 320px;
+	padding: 8px 0 0 16px;
+	background-color: rgba(255, 255, 255, .5);
+	position: absolute;
+	bottom: 48px;
 }
 
 section.gallery-section .gallery-text-box {
@@ -202,9 +232,12 @@ section.price-section {
 section h2 {
 	font-size: 22px;
 	font-weight: bold;
+	padding-bottom: 3px;
+	margin-bottom: -3px;
 	border-bottom: solid 8px #00cfab;
 	width: 320px;
 	text-align: left;
+	text-transform: uppercase;
 }
 section.price-section .price-tag {
 	height: 120px;
@@ -229,6 +262,7 @@ section.price-section .price-tag-normal {
 	width: 320px;
 	height: 512px;
 	border: solid 2px #c2c2c2;
+	position: relative;
 }
 section.price-section .price-tag-normal .feature:nth-of-type(odd) {
 	background-color: #e4e4e4;
@@ -242,6 +276,7 @@ section.price-section .price-tag-highlight {
 	height: 512px;
 	margin: 0 45px;
 	border: solid 2px #00cfab;
+	position: relative;
 }	
 section.price-section .price-tag-highlight .price-tag {
 	height: 120px;
@@ -257,6 +292,34 @@ section.price-section .price-tag-highlight .feature:nth-of-type(odd) {
 section.price-section .price-tag-highlight .feature:nth-of-type(even) {
 	background-color: #f1f1f1;
 }
+div[class^="circle-"] {
+	border-radius: 50%;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+}
+.circle-big-grey {
+	width: 64px;
+	height: 64px;
+	border: solid 2px #c2c2c2;
+	background-color: #fff;
+	margin: -32px auto;
+}
+.circle-big-green {
+	width: 64px;
+	height: 64px;
+	border: solid 2px #00cfab;
+	background-color: #00cfab;
+	margin: -32px auto;
+}
+.circle-small {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	margin: 14px auto;
+}
+
 section.price-section button {
 	padding: 8px 32px;
 	font-size: 16px;
@@ -284,11 +347,7 @@ section.price-section h3 {
 	font-weight: bold;
 }
 .month {
-<<<<<<< HEAD
-	margin-top: 5px;
-=======
 	margin-top: 2px;
->>>>>>> Aktualizacja
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -318,7 +377,6 @@ input[type=checkbox].css-checkbox + label.css-label, input[type=checkbox].css-ch
 	line-height:1.3;
 	background-repeat:no-repeat;
 	background-position: 0 0;
-	/*font-size:40px;*/
 	vertical-align:middle;
 	cursor:pointer;
 
