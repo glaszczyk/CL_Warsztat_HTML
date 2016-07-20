@@ -142,6 +142,7 @@ section.carousel-section .container::before {
 	color: #00cfab;
 	position: absolute;
 	top: 216px;
+	left: 0;
 }
 section.carousel-section .carousel-text {
 	float: left;
@@ -227,7 +228,8 @@ section.gallery-section .gallery-text-box h3 {
 /* ***** PRICE TABLE ***** */
 section.price-section {
 	height: 768px;
-	text-align: center;;
+	text-align: center;
+	padding-top: 48px;
 }
 section h2 {
 	font-size: 22px;
@@ -354,6 +356,10 @@ section.price-section h3 {
 /* ***** FORM ***** */
 section.form-section {
 	height: 544px;
+	padding-top: 29px;
+}
+section.form-section form {
+	margin-top: 64px;
 }
 section.form-section .form-left {
 	float: left;
@@ -361,6 +367,17 @@ section.form-section .form-left {
 	height: 432px;
 	margin-right: 45px;
 }	
+section.form-section .form-left input {
+	height: 64px;
+	width: 685px;
+	margin-bottom: 32px;
+	border: solid 2px #00cfab;
+}
+section.form-section .form-left textarea {
+	height: 196px;
+	width: 685px;
+	border: solid 2px #00cfab;
+}
 section.form-section .form-right {
 	float: left;
 	width: 320px;
