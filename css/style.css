@@ -196,21 +196,28 @@ section.gallery-section .container {
 section.gallery-section .gallery-image {
 	float: left;
 	margin-right: 45px;
+	position: relative;
 }
 section.gallery-section .gallery-image img {
 	width: 320px;
 	height: 224px;
 }		
-section.gallery-section .gallery-image h3 {
+section.gallery-section .gallery-image .gallery-image-overlay {
+	background-color: rgba(255, 255, 255, .5);
+	height: 64px;
+	position: absolute;
+	bottom: 16px;
+	width: 320px;
+}
+section.gallery-section .gallery-image .gallery-image-overlay h3 {
 	font-size: 16px;
-	line-height: 8px;
+	line-height: 16px;
 	height: 32px;
 	font-weight: bold;
 	border-bottom: solid 7px #00cfab;
-	width: 320px;
+	width: 160px;
 	padding: 8px 0 0 16px;
-	background-color: rgba(255, 255, 255, .5);
-	position: absolute;
+	/*position: absolute;*/
 	bottom: 48px;
 }
 
@@ -218,12 +225,21 @@ section.gallery-section .gallery-text-box {
 	float: left;
 	width: 320px;
 	height: 256px;
+	padding: 16px;
+	border: solid 2px #e4e4e4;
 }
 section.gallery-section .gallery-text-box h3 {
 	font-size: 16px;
 	font-weight: bold;
 	border-bottom: solid 7px #00cfab;
 	width: 160px;
+	margin: 16px 0 16px 0;
+	padding-bottom: 3px;
+}
+section.gallery-section .gallery-text-box p {
+	font-size: 14px;
+	line-height: 21px;
+	margin-top: 16px;
 }
 /* ***** PRICE TABLE ***** */
 section.price-section {
@@ -322,14 +338,18 @@ div[class^="circle-"] {
 	margin: 14px auto;
 }
 
-section.price-section button {
+section.price-section div[class^="price-tag-"]  button {
 	padding: 8px 32px;
 	font-size: 16px;
-	line-height: 16px;
+	height: 32px;
 	border: none;
 	text-transform: uppercase;
-	margin: 20px 32px;
 	border-radius: 10px;
+	position: absolute;
+	bottom: 16px;
+	left: 93px;
+	right: 0;
+	margin: 0 auto;
 }
 section.price-section h3 {
 	padding-top: 48px;
@@ -372,11 +392,20 @@ section.form-section .form-left input {
 	width: 685px;
 	margin-bottom: 32px;
 	border: solid 2px #00cfab;
+	font-size: 32px;
+	padding-left: 16px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 500;
 }
 section.form-section .form-left textarea {
 	height: 196px;
 	width: 685px;
 	border: solid 2px #00cfab;
+	font-size: 32px;
+	padding-left: 16px;
+	padding-top: 16px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 500;
 }
 section.form-section .form-right {
 	float: left;
@@ -410,6 +439,20 @@ label.css-label {
 	-ms-user-select: none;
 	user-select: none;
 	font-size: 16px;
+	margin-top: 34px;
+}
+section.form-section .form-right input[type=submit] {
+	border: none;
+	margin-top: 35px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 32px;
+	line-height: 64px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	width: 320px;
+	font-family: 'Raleway', Arial, sans-serif;
+	font-weight: 500;
 }
 /* ***** FOOTER ***** */
 footer {
