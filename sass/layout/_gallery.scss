@@ -1,0 +1,50 @@
+.gallery {
+	height: $moduleY * 22;
+	padding-top: $moduleY *2;
+}
+.gallery-image-container {
+	float: left;
+	margin-right: 45px;
+	position: relative;
+	&__overlay {
+		background-color: rgba(255, 255, 255, .5);
+		height: 64px;
+		position: absolute;
+		bottom: 16px;
+		width: 320px;
+	}
+	&__title {
+		font-size: 16px;
+		line-height: 16px;
+		height: 32px;
+		font-weight: bold;
+		border-bottom: solid 7px #00cfab;
+		width: 160px;
+		padding: 8px 0 0 16px;
+		bottom: 48px;
+	}
+	&__image {
+		width: $moduleY * 20;
+		height: $moduleY * 14;
+	}
+}
+.gallery-text-container {
+	float: left;
+	width: 320px;
+	height: 256px;
+	padding: 16px;
+	border: solid 2px #e4e4e4;
+	&__title {
+		font-size: 16px;
+		font-weight: bold;
+		border-bottom: solid 7px #00cfab;
+		width: 160px;
+		margin: 16px 0 16px 0;
+		padding-bottom: 3px;
+	}
+	&__paragraph {
+		font-size: 14px;
+		line-height: 21px;
+		margin-top: 16px;
+	}
+}

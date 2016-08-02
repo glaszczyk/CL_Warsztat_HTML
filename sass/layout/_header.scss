@@ -1,0 +1,76 @@
+.header {
+	background-color: $color-dark;
+	height: $moduleX;
+}
+.site-logo {
+	height: $moduleX;
+	width: $moduleX * 3;
+	float: left;
+	&__normal-text {
+		text-transform: uppercase;
+		color: $color-light;
+		line-height: $moduleX;
+	}
+	&__bold-text,
+	&__bold-text--color {
+		font-weight: bold;
+	}
+	&__bold-text--color {
+		color: $color-primary;
+	}
+	&__link {
+		text-decoration: none;
+		color: $color-light;
+	}
+}
+.navigation {
+	float: right;
+	line-height: $moduleX;
+	width: $moduleX * 11;
+}
+.menu {
+	text-transform: uppercase;
+	color: white;
+	list-style-type: none;
+	height: $moduleX;
+	&__item {
+		width: $moduleX * 3;
+		display: inline-block;
+		position: relative;
+		text-align: center;
+		&:hover {
+			.menu__submenu-box {
+				display: block;
+				width: $moduleX * 4;
+				position: absolute;
+				top: $moduleX * 1.5;
+				left: $moduleX / -2;
+				background-color: black;
+				color: white;
+				z-index: 100;
+				padding: 10px 0;
+			}
+			.menu__arrow {
+				width: $moduleX;
+				height: $moduleX;
+				top: -$moduleX / 4.5;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				position: absolute;
+				background-color: black;
+				transform: rotate(45deg);
+				z-index: -10;
+			}
+		}
+	}
+	&__submenu-box {
+		list-style-type: none;
+		display: none;
+	}
+	&__submenu-item {
+		height: 35px;
+		font-size: 14px;
+		line-height: 35px;
+	}
+}

@@ -1,0 +1,19 @@
+* {
+	@extend %reset-css;
+}
+
+@include screen-is-smaller($mobile-size) {
+	.screen-container-clearfix {
+		@include screen-container-clearfix($mobile-size);
+	}
+}
+@include screen-is-bigger($mobile-size) {
+	.screen-container-clearfix {
+		@include screen-container-clearfix($mobile-size);
+	}
+}
+@include screen-is-bigger($desktop-size) {
+	.screen-container-clearfix {
+		@include screen-container-clearfix($desktop-size);
+	}
+}

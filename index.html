@@ -8,133 +8,146 @@
 	<link rel="stylesheet" href="./css/style.css">	
 </head>
 <body>
+<!-- *********** Wersja BEM ************* -->
 	<!-- HEADER -->
-	<header>
-		<div class="container clearfix">
-			<div class="logo-header">
-				<p>Sit <strong class="green">On</strong> Chair</p>
+	<header class="header">
+		<div class="screen-container-clearfix">
+			<div class="site-logo">
+				<p class="site-logo__normal-text"><a class="site-logo__link" href="#">Sit <strong class="site-logo__bold-text--color">On</strong> Chair</a></p>
 			</div>
-			<nav>
-				<ul>
-					<li>O Firmie</li>
-					<li>Galeria</li>
-					<li>Kontakt</li>
-				</ul>
-				<ul>
-					<li>Aktualności</li>
-					<li>Nasz team</li>
-					<li>Historia</li>
+			<nav class="navigation">
+				<ul class="menu">
+					<li class="menu__item">O Firmie
+						<ul class="menu__submenu-box">
+							<div class="menu__arrow"></div>
+							<li  class="menu__submenu-item">Aktualności</li>
+							<li  class="menu__submenu-item">Nasz team</li>
+							<li  class="menu__submenu-item">Historia</li>
+						</ul>
+					</li>
+					<li class="menu__item">Galeria</li>
+					<li class="menu__item">Kontakt</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<!-- CAROUSEL -->
-	<section class="carousel-section">
-		<article class="container clearfix">
-			<div class="carousel-image">
-				<img src="./images/black_chair.png" alt="Black Chair main image">
-			</div>
-			<div class="carousel-text">
-				<h1>Sit <strong class="green">on</strong> our <strong class="green">chair</strong></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facilis, unde. Nihil quae, maxime! Quidem eligendi obcaecati, deserunt dolorem ad soluta voluptatibus, amet nisi vel repudiandae at tenetur reiciendis totam.</p>
-				<button class="bc-green">Zobacz więcej</button>
-			</div>
-		</article>
+	<section class="carousel">
+		<div class="screen-container-clearfix">
+			<article class="slide-item">
+				<div class="slide-item-image-container">
+					<img class="slide-item-image-container__image" src="./images/black_chair.png" alt="Black Chair main image">
+				</div>
+				<div class="slide-item-text-container">
+					<h1 class="slide-item-text-container__headline">Sit <strong class="slide-item-text-container__bold--color">on</strong> our <strong class="slide-item-text-container__bold--color">chair</strong></h1>
+					<p class="slide-item-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facilis, unde. Nihil quae, maxime! Quidem eligendi obcaecati, deserunt dolorem ad soluta voluptatibus, amet nisi vel repudiandae at tenetur reiciendis totam.</p>
+					<button class="slide-item-text-container__button--color">Zobacz więcej</button>
+				</div>
+			</article>
+		</div>
 	</section>
 	<!-- GALLERY -->
-	<section class="gallery-section">
-		<div class="container clearfix">
-			<div class="gallery-image">
-				<div class="gallery-image-overlay">
-					<h3>Chair CLAIR</h3>
+	<section class="gallery">
+		<div class="screen-container-clearfix">
+			<div class="gallery-image-container">
+				<div class="gallery-image-container__overlay">
+					<h3 class="gallery-image-container__title">Chair CLAIR</h3>
 				</div>
-				<img src="./images/box1_img.jpg" alt="Gallery image one">
+				<img class="gallery-image-container__image" src="./images/box1_img.jpg" alt="Clair chair image">
 			</div>
-			<div class="gallery-image">
-				<div class="gallery-image-overlay">
-					<h3>Chair MARGARITA</h3>
+			<div class="gallery-image-container">
+				<div class="gallery-image-container__overlay">
+					<h3 class="gallery-image-container__title">Chair MARGARITA</h3>
 				</div>
-				<img src="./images/box2_img.jpg" alt="Gallery image two">
+				<img class="gallery-image-container__image" src="./images/box2_img.jpg" alt="Margarita chair image">
 			</div>
-			<div class="gallery-text-box">
-				<h3>Find all inputs</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et optio magni ex labore esse quisquam fugiat.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem recusandae optio ipsam?</p>
+			<div class="gallery-text-container">
+				<h3 class="gallery-text-container__title">Find all inputs</h3>
+				<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et optio magni ex labore esse quisquam fugiat.</p>
+				<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem recusandae optio ipsam?</p>
 			</div>
 		</div>
 	</section>
 	<!-- PRICE TABLE -->
-	<section class="price-section  bc-f1">
-		<div class="container clearfix">
-			<h2>Cennik</h2>
-			<div class="price-tag-normal bc-f9">
-				<div class="circle-big-grey">
-					<div class="circle-small bc-color9"></div>
+	<section class="price-table">
+		<div class="screen-container-clearfix">
+			<h2 class="price-table__title">Cennik</h2>
+			
+			<div class="price-tag">
+				<div class="price-tag__circle-big">
+					<div class="price-tag__circle-small"></div>
 				</div>
-				<h3 class="green">Basic plan</h3>
-				<div class="price-tag">
-					<p class="price color9">85<span class="superscript">99</span></p>
-					<p class="month color9">pln/msc</p>
+				<h3 class="price-tag__title">Basic plan</h3>
+				<div class="price-tag__price-circle">
+					<p class="price-tag__price">85<span class="price-tag__superscript">99</span></p>
+					<p class="price-tag__permonth">pln/msc</p>
 				</div>
-				<p class="feature">Zakup towaru + dowóz</p>
-				<p class="feature">Serwis</p>
-				<button class="bc-green f9">Dołącz</button>
+				<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
+				<p class="price-tag__feature">Serwis</p>
+				<button class="price-tag__button">Dołącz</button>
 			</div>
-			<div class="price-tag-highlight bc-green">
-				<div class="circle-big-green">
-					<div class="circle-small bc-f9"></div>
+
+
+			<div class="price-tag--color">
+				<div class="price-tag__circle-big--color">
+					<div class="price-tag__circle-small--white"></div>
 				</div>
-				<h3 class="white">Standard plan</h3>
-				<div class="price-tag">
-					<p class="price green">95<span class="superscript">99</span></p>
-					<p class="month green">pln/msc</p>
+				<h3 class="price-tag__title--white">Standard plan</h3>
+				<div class="price-tag__price-circle--color">
+					<p class="price-tag__price--color">95<span class="price-tag__superscript--color">99</span></p>
+					<p class="price-tag__permonth--color">pln/msc</p>
 				</div>
-				<p class="feature">Zakup towaru + dowóz</p>
-				<p class="feature">Serwis</p>
-				<p class="feature">Gwarancja 5 lat</p>
-				<button class="green bc-f9">Dołącz</button>
+				<p class="price-tag__feature--light">Zakup towaru + dowóz</p>
+				<p class="price-tag__feature">Serwis</p>
+				<p class="price-tag__feature--light">Gwarancja 5 lat</p>
+				<button class="price-tag__button--white">Dołącz</button>
 			</div>
-			<div class="price-tag-normal bc-f9">
-				<div class="circle-big-grey">
-					<div class="circle-small bc-color9"></div>
+			
+
+			<div class="price-tag">
+				<div class="price-tag__circle-big">
+					<div class="price-tag__circle-small"></div>
 				</div>
-				<h3 class="green">Advance plan</h3>
-				<div class="price-tag">
-					<p class="price color9">211<span class="superscript">99</span></p>
-					<p class="month color9">pln/msc</p>
+				<h3 class="price-tag__title">Advance plan</h3>
+				<div class="price-tag__price-circle">
+					<p class="price-tag__price">211<span class="price-tag__superscript">99</span></p>
+					<p class="price-tag__permonth">pln/msc</p>
 				</div>
-				<p class="feature">Zakup towaru + dowóz</p>
-				<p class="feature">Serwis</p>
-				<p class="feature">Gwarancja 5 lat</p>
-				<p class="feature">Porady projektanta</p>
-				<button class="bc-green f9">Dołącz</button>
-			</div>
+				<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
+				<p class="price-tag__feature">Serwis</p>
+				<p class="price-tag__feature--dark">Gwarancja 5 lat</p>
+				<p class="price-tag__feature">Porady projektanta</p>
+				<button class="price-tag__button">Dołącz</button>
+			</div>	
 		</div>
 	</section>
 	<!-- FORM -->
-	<section class="form-section">
-		<div class="container clearfix">
-			<h2>Kontakt</h2>
-			<form>
+	<section class="contact-form">
+		<div class="screen-container-clearfix">
+			<h2 class="contact-form__title">Kontakt</h2>
+			<form class="form">
 				<div class="form-left">
-					<input type="text" name="name" placeholder="Imię">
-					<input type="email" name="email" placeholder="email">
-					<textarea cols="100" rows="3" placeholder="Wiadomość"></textarea>
+					<input class="form-left__name-input" type="text" name="name" placeholder="Imię">
+					<input class="form-left__email-input" type="email" name="email" placeholder="email">
+					<textarea class="form-left__message-textarea" cols="100" rows="3" placeholder="Wiadomość"></textarea>
 				</div>			
 				<div class="form-right">
-					<img src="./images/red_chair.png" alt="Red Chair image">
-					<input type="checkbox" class="css-checkbox" name="agree">
-					<label class="css-label color9" for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
-					<input class="bc-green white" type="submit" value="Wyślij">
+					<img class="form-right__image" src="./images/red_chair.png" alt="Red Chair image">
+					<input class="form-right__checkbox" type="checkbox" name="agree">
+					<label class="form-right__checkbox-label" for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
+					<input class="form-right__button--color" type="submit" value="Wyślij">
 				</div>			
 			</form>
 		</div>
 	</section>
+
 	<!-- FOOTER -->
-	<footer>
-		<div class="container clearfix">
-			<p class="copyright color9">Copyright 2014 | All Rights Reserved &ndash; Sit On Chair</p>
-			<p class="logo-footer color9">Sit <strong>On</strong> Chair</p>	
+	<footer class="footer">
+		<div class="screen-container-clearfix">
+			<p class="copyright">Copyright 2014 | All Rights Reserved &ndash; Sit On Chair</p>
+			<div class="site-logo--dark">
+				<p class="site-logo__normal-text--dark"><a class="site-logo__link--dark" href="#">Sit <strong class="site-logo__bold-text">On</strong> Chair</a></p>
+			</div>	
 			<div class="social-media">
 				<img src="./images/flickr.png" alt="Flickr logo">
 				<img src="./images/vimeo.png" alt="Flickr logo">
