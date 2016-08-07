@@ -1,0 +1,30 @@
+.configurator {
+	&__container {
+		@include container($desktop-size);
+		height: $moduleY * 34;
+		padding-top: ($moduleY * 2) - 3;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__container--clearfix {
+		@extend %clearfix::before;
+		@extend %clearfix::after;
+	}	
+	&__title,
+	&__title--right {
+		@extend %section-title;
+	}
+	&__title--right {
+		text-align: right;
+	}
+	&__options {
+		@include column(320px);
+	}
+	&__graphic {
+		@include column(320px);
+	}
+	&__total {
+		@include column(320px);
+	}
+
+}

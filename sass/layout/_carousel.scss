@@ -1,5 +1,4 @@
 .carousel {
-	height: $moduleY * 31; 
 	background: rgba(250,250,250,1);
 	background: -moz-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,248,248,1) 25%, rgba(245,245,245,1) 50%, rgba(225,225,228,1) 75%, rgba(207,206,215,1) 100%);
 	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(250,250,250,1)), color-stop(25%, rgba(248,248,248,1)), color-stop(50%, rgba(245,245,245,1)), color-stop(75%, rgba(225,225,228,1)), color-stop(100%, rgba(207,206,215,1)));
@@ -8,51 +7,82 @@
 	background: -ms-linear-gradient(top, rgba(250,250,250,1) 0%, rgba(248,248,248,1) 25%, rgba(245,245,245,1) 50%, rgba(225,225,228,1) 75%, rgba(207,206,215,1) 100%);
 	background: linear-gradient(to bottom, rgba(250,250,250,1) 0%, rgba(248,248,248,1) 25%, rgba(245,245,245,1) 50%, rgba(225,225,228,1) 75%, rgba(207,206,215,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#cfced7', GradientType=0 );
+	&__container {
+		@include container($desktop-size);
+		height: $moduleY * 31; 
+	}
+	&__container--clearfix {
+		@extend %clearfix::before;
+		@extend %clearfix::after;
+	}
+	&__slider {
+		position: relative;
+		&--previous,
+		&--next {
+			font-size: $fontSize * 4;
+			font-weight: normal;
+			color: #00cfab;
+			position: absolute;
+			top: 216px;			
+		}
+		&--previous {
+			left: 0;
+		}
+		&--next {
+			right: -2px;
+		}
+	}
+	&__slide-item {
+		clear: both;
+		position: relative;
+		// &::before,
+		// &::after {
+		// 	font-size: $fontSize * 4;
+		// 	font-weight: normal;
+		// 	color: #00cfab;
+		// 	position: absolute;
+		// 	top: 216px;
+		// }
+		// &::before {
+		// 	content: "<";
+		// 	left: 0;
+		// }
+		// &::after {
+		// 	content: ">";
+		// 	right: -2px;	
+		// }
+	}
+	&__slide-item--hidden {
+		display: none;
+	}
 }
 .slide-item {
-	position: relative;
-	&:before,
-	&:after {
-		font-size: $fontSize * 4;
-		font-weight: normal;
-		color: #00cfab;
-		position: absolute;
-		top: 216px;
+	&__image-container {
+		float: left;
+		width: 406px;
+		position: relative;
 	}
-	&:before {
-		content: "<";
-		left: 0;
-	}
-	&:after {
-		content: ">";
-		right: -2px;	
-	}
-}
-.slide-item-image-container {
-	float: left;
-	width: 406px;
-	position: relative;
 	&__image {
 		transform: scale(1.3, 1.3);
 		margin: 110px 0 0 32px;
 	}
+
+	&__text-container {
+		float: left;
+		width: 644px;
+		height: 240px;
+		margin-top: 128px;
+		padding: 0 96px;
+		text-align: center;
+		position: relative;
+	}
 }
-.slide-item-text-container {
-	float: left;
-	width: 644px;
-	height: 240px;
-	margin-top: 128px;
-	padding: 0 96px;
-	text-align: center;
-	position: relative;
-	&__headline,
-	&__bold--color {
-		font-size: 40px;
+.slide-text-container {
+	&__headline {
+		font-size: $moduleX;
 		text-transform: uppercase;
 		font-weight: normal;
-		height: 64px;
-	}
-	&__headline {
+		height: $moduleY * 4;
 		color: $color-dark;
 	}
 	&__bold--color {
@@ -65,8 +95,7 @@
 		text-align: center;
 		height: 128px;
 	}
-	&__button,
-	&__button--color {
+	&__button, [class*="__button"] {
 		position: absolute;
 		top: $moduleY * 12;
 		left: 0;
@@ -77,15 +106,13 @@
 		text-align: center;
 		text-decoration: none;
 		display: inline-block;
-		font-size: 16px;
+		font-size: $fontSize;
 		border-radius: 5px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 	}
-	&__button {
-		&--color {
-			color: white;
-			background-color: $color-primary;
-		}
+	&__button--color {
+		color: white;
+		background-color: $color-primary;
 	}
 }

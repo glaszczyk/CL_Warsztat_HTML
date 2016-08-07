@@ -1,18 +1,29 @@
 .header {
 	background-color: $color-dark;
-	height: $moduleX;
+	&__container {
+		@include container($desktop-size);
+		height: $moduleX;
+	}
+	&__container--clearfix {
+		@extend %clearfix::before;
+		@extend %clearfix::after;
+	}
+	&__site-logo {
+		width: $moduleX * 3;
+		float: left;
+	}
+	&__navigation {
+		float: right;
+		width: $moduleX * 11;
+	}
 }
 .site-logo {
-	height: $moduleX;
-	width: $moduleX * 3;
-	float: left;
 	&__normal-text {
 		text-transform: uppercase;
 		color: $color-light;
 		line-height: $moduleX;
 	}
-	&__bold-text,
-	&__bold-text--color {
+	&__bold-text, [class*="bold-text"] {
 		font-weight: bold;
 	}
 	&__bold-text--color {
@@ -24,49 +35,69 @@
 	}
 }
 .navigation {
-	float: right;
-	line-height: $moduleX;
-	width: $moduleX * 11;
-}
-.menu {
-	text-transform: uppercase;
-	color: white;
-	list-style-type: none;
-	height: $moduleX;
-	&__item {
+	&__menu {
+		text-transform: uppercase;
+		color: $color-light;
+		list-style-type: none;
+		line-height: $moduleX;
+	}
+	&__menu-item {
 		width: $moduleX * 3;
 		display: inline-block;
 		position: relative;
 		text-align: center;
-		&:hover {
-			.menu__submenu-box {
-				display: block;
-				width: $moduleX * 4;
-				position: absolute;
-				top: $moduleX * 1.5;
-				left: $moduleX / -2;
-				background-color: black;
-				color: white;
-				z-index: 100;
-				padding: 10px 0;
-			}
-			.menu__arrow {
-				width: $moduleX;
-				height: $moduleX;
-				top: -$moduleX / 4.5;
-				left: 0;
-				right: 0;
-				margin: 0 auto;
-				position: absolute;
-				background-color: black;
-				transform: rotate(45deg);
-				z-index: -10;
-			}
-		}
+		// &:hover {
+		// 	.navigation__submenu-box {
+		// 		display: block;
+		// 		width: $moduleX * 4;
+		// 		position: absolute;
+		// 		top: $moduleX * 1.5;
+		// 		left: $moduleX / -2;
+		// 		background-color: black;
+		// 		color: white;
+		// 		z-index: 100;
+		// 		padding: 10px 0;
+		// 	}
+		// 	.navigation__arrow {
+		// 		width: $moduleX;
+		// 		height: $moduleX;
+		// 		top: -$moduleX / 4.5;
+		// 		left: 0;
+		// 		right: 0;
+		// 		margin: 0 auto;
+		// 		position: absolute;
+		// 		background-color: black;
+		// 		transform: rotate(45deg);
+		// 		z-index: -10;
+		// 	}
+		// }
 	}
 	&__submenu-box {
+		display: block;
+		width: $moduleX * 4;
+		position: absolute;
+		top: $moduleX * 1.5;
+		left: $moduleX / -2;
+		background-color: black;
+		color: white;
+		z-index: 100;
+		padding: 10px 0;
 		list-style-type: none;
+	}
+	&__submenu-box--hidden {
 		display: none;
+	}
+	&__arrow {
+		width: $moduleX;
+		height: $moduleX;
+		top: -$moduleX / 4.5;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		position: absolute;
+		background-color: black;
+		transform: rotate(45deg);
+		z-index: -10;
 	}
 	&__submenu-item {
 		height: 35px;

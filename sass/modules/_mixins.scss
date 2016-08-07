@@ -1,6 +1,13 @@
-@mixin screen-container-clearfix($screenSize) {
+@mixin container($screenSize) {
 	width: $screenSize;
 	margin: 0 auto;
+}
+@mixin column($width) {
+	width: $width;
+}
+// Placeholdery z elementami wykorzystywanymi w wielu modułach
+%clearfix::before,
+%clearfix::after {
 	clear: both;
 	content: "";
 	display: table;
@@ -19,6 +26,21 @@
 	left: 0;
 	right: 0;
 }
+%section-title {
+	border-bottom: solid 8px $color-primary;
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	margin-bottom: -3px;
+	padding-bottom: 3px;
+	text-align: left;
+	text-transform: uppercase;
+	width: 320px;
+	word-spacing: 1px;
+}
+// Koniec placeholderów
+
+// Mixin sprawdzania responsywności
 @mixin screen-is-smaller($value) {
 	@media all and (max-width: $value) {
 		@content;
@@ -30,3 +52,5 @@
 		@content;
 	}
 }
+
+// Koniec sprawdzania responswyności

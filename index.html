@@ -5,155 +5,339 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sit On Chair</title>
 	<meta name="description" content="Sit On Chair website">
-	<link rel="stylesheet" href="./css/style.css">	
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/header.js"></script>
+	<script src="./js/carousel.js"></script>
+	<script src="./js/gallery.js"></script>
 </head>
 <body>
 <!-- *********** Wersja BEM ************* -->
 	<!-- HEADER -->
 	<header class="header">
-		<div class="screen-container-clearfix">
-			<div class="site-logo">
-				<p class="site-logo__normal-text"><a class="site-logo__link" href="#">Sit <strong class="site-logo__bold-text--color">On</strong> Chair</a></p>
+		<div class="header__container header__container--clearfix">
+
+			<!-- Pojemnik na site-logo -->
+			<div class="header__site-logo">
+				<div class="site-logo">
+					<p class="site-logo__normal-text"><a class="site-logo__link" href="#">Sit <strong class="site-logo__bold-text--color">On</strong> Chair</a></p>
+				</div>
 			</div>
-			<nav class="navigation">
-				<ul class="menu">
-					<li class="menu__item">O Firmie
-						<ul class="menu__submenu-box">
-							<div class="menu__arrow"></div>
-							<li  class="menu__submenu-item">Aktualności</li>
-							<li  class="menu__submenu-item">Nasz team</li>
-							<li  class="menu__submenu-item">Historia</li>
-						</ul>
-					</li>
-					<li class="menu__item">Galeria</li>
-					<li class="menu__item">Kontakt</li>
-				</ul>
-			</nav>
+			<!-- Koniec pojemnika na logo -->
+
+			<!-- Pojemnik na nawigację -->
+			<div class="header__navigation">	
+				<nav class="navigation">
+					<ul class="navigation__menu">
+						<li class="navigation__menu-item">O Firmie
+							<!-- Menu rozwijane 1 -->
+							<ul class="navigation__submenu-box navigation__submenu-box--hidden">
+								<div class="navigation__arrow"></div>
+								<li  class="navigation__submenu-item">Aktualności</li>
+								<li  class="navigation__submenu-item">Nasz team</li>
+								<li  class="navigation__submenu-item">Historia</li>
+							</ul>
+							<!-- Koniec menu rozwijanego 1 -->
+						</li>
+
+						<li class="navigation__menu-item">Galeria
+							<!-- Menu rozwijane 2 -->
+							<ul class="navigation__submenu-box navigation__submenu-box--hidden">
+								<div class="navigation__arrow"></div>
+								<li  class="navigation__submenu-item">Produkty</li>
+								<li  class="navigation__submenu-item">Zastosowanie</li>
+							</ul>
+							<!-- Koniec menu rozwijanego 2 -->
+						</li>
+
+						<li class="navigation__menu-item">Kontakt
+							<!-- Menu rozwijane 1 -->
+							<ul class="navigation__submenu-box navigation__submenu-box--hidden">
+								<div class="navigation__arrow"></div>
+								<li  class="navigation__submenu-item">Jak dojechać</li>
+								<li  class="navigation__submenu-item">Pytania</li>
+							</ul>
+							<!-- Koniec menu rozwijanego 3 -->
+						</li>
+
+					</ul>
+				</nav>
+			</div>
+			<!-- Koniec pojemnika na nawigację -->
 		</div>
 	</header>
+
+
 	<!-- CAROUSEL -->
 	<section class="carousel">
-		<div class="screen-container-clearfix">
-			<article class="slide-item">
-				<div class="slide-item-image-container">
-					<img class="slide-item-image-container__image" src="./images/black_chair.png" alt="Black Chair main image">
+		<div class="carousel__container carousel__container--clearfix">
+			
+			<!-- Pojemnik na slider -->
+			<div class="carousel__slider">
+				<div class="carousel__slider--previous"> < </div>
+				<div class="carousel__slider--next"> > </div>
+			
+				<!-- Pojemnik na slajd nr 1 -->
+				<div class="carousel__slide-item">
+
+					<!-- Slajd nr 1 -->
+					<article class="slide-item">
+						<div class="slide-item__image-container">
+							<img class="slide-item__image" src="./images/black_chair.png" alt="Black Chair main image">
+						</div>
+						<div class="slide-item__text-container">
+							<div class="slide-text-container">
+								<h1 class="slide-text-container__headline">Sit <strong class="slide-text-container__bold--color">on</strong> our <strong class="slide-text-container__bold--color">chair</strong></h1>
+								<p class="slide-text-container__paragraph">Slajd nr 1 dolor sit amet, consectetur adipisicing elit. Voluptas facilis, unde. Nihil quae, maxime! Quidem eligendi obcaecati, deserunt dolorem ad soluta voluptatibus, amet nisi vel repudiandae at tenetur reiciendis totam.</p>
+								<button class="slide-text-container__button--color">Zobacz więcej</button>
+							</div>
+						</div>
+					</article>
+					<!-- Koniec slajdu nr 1 -->
 				</div>
-				<div class="slide-item-text-container">
-					<h1 class="slide-item-text-container__headline">Sit <strong class="slide-item-text-container__bold--color">on</strong> our <strong class="slide-item-text-container__bold--color">chair</strong></h1>
-					<p class="slide-item-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas facilis, unde. Nihil quae, maxime! Quidem eligendi obcaecati, deserunt dolorem ad soluta voluptatibus, amet nisi vel repudiandae at tenetur reiciendis totam.</p>
-					<button class="slide-item-text-container__button--color">Zobacz więcej</button>
+				<!-- Koniec pojemnika na slajd nr 1 -->
+
+				<!-- Pojemnik na slajd nr 2 -->
+				<div class="carousel__slide-item--hidden">
+
+					<!-- Slajd nr 2 -->
+					<article class="slide-item">
+						<div class="slide-item__image-container">
+							<img class="slide-item__image" src="./images/orange.png" alt="Orange Chair main image">
+						</div>
+						<div class="slide-item__text-container">
+							<div class="slide-text-container">
+								<h1 class="slide-text-container__headline">Sit <strong class="slide-text-container__bold--color">on</strong> our <strong class="slide-text-container__bold--color">chair</strong></h1>
+								<p class="slide-text-container__paragraph">Slajd nr 2 dolor sit amet, consectetur adipisicing elit. Quibusdam voluptatum voluptates, quasi fugiat voluptate ut nostrum!</p>
+								<button class="slide-text-container__button--color">Zobacz więcej</button>
+							</div>
+						</div>
+					</article>
+					<!-- Koniec slajdu nr 2 -->
 				</div>
-			</article>
+				<!-- Koniec pojemnika na slajd nr 2 -->
+
+				<!-- Pojemnik na slajd nr 3 -->
+				<div class="carousel__slide-item--hidden">
+
+					<!-- Slajd nr 3 -->
+					<article class="slide-item">
+						<div class="slide-item__image-container">
+							<img class="slide-item__image" src="./images/red.png" alt="Red Chair main image">
+						</div>
+						<div class="slide-item__text-container">
+							<div class="slide-text-container">
+								<h1 class="slide-text-container__headline">Sit <strong class="slide-text-container__bold--color">on</strong> our <strong class="slide-text-container__bold--color">chair</strong></h1>
+								<p class="slide-text-container__paragraph">Slajd nr 3, unde. Nihil quae, maxime! Quidem eligendi obcaecati, deserunt dolorem ad soluta voluptatibus, amet nisi vel repudiandae at tenetur reiciendis totam.</p>
+								<button class="slide-text-container__button--color">Zobacz więcej</button>
+							</div>
+						</div>
+					</article>
+					<!-- Koniec slajdu nr 3 -->
+
+				</div>
+				<!-- Koniec pojemnika na slajd nr 3 -->
+			</div>
+			<!-- Koniec pojemnika na slider -->
 		</div>
 	</section>
 	<!-- GALLERY -->
 	<section class="gallery">
-		<div class="screen-container-clearfix">
-			<div class="gallery-image-container">
-				<div class="gallery-image-container__overlay">
-					<h3 class="gallery-image-container__title">Chair CLAIR</h3>
+		<div class="gallery__container gallery__container--clearfix">
+
+			<!-- Pojemnik na obrazek nr 1 -->
+			<div class="gallery__image-container">
+				<div class="gallery-image-container">
+					<div class="gallery-image-container__overlay">
+						<h3 class="gallery-image-container__title">Chair CLAIR</h3>
+					</div>
+					<a href="#"><img class="gallery-image-container__image" src="./images/box1_img.jpg" alt="Clair chair image"></a>
 				</div>
-				<img class="gallery-image-container__image" src="./images/box1_img.jpg" alt="Clair chair image">
 			</div>
-			<div class="gallery-image-container">
-				<div class="gallery-image-container__overlay">
-					<h3 class="gallery-image-container__title">Chair MARGARITA</h3>
+			<!-- Koniec pojemnika nr 1 -->
+
+			<!-- Pojemnik na obrazek nr 2 -->
+			<div class="gallery__image-container">
+				<div class="gallery-image-container">
+					<div class="gallery-image-container__overlay">
+						<h3 class="gallery-image-container__title">Chair MARGARITA</h3>
+					</div>
+					<a href="#"><img class="gallery-image-container__image" src="./images/box2_img.jpg" alt="Margarita chair image"></a>
 				</div>
-				<img class="gallery-image-container__image" src="./images/box2_img.jpg" alt="Margarita chair image">
 			</div>
-			<div class="gallery-text-container">
-				<h3 class="gallery-text-container__title">Find all inputs</h3>
-				<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et optio magni ex labore esse quisquam fugiat.</p>
-				<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem recusandae optio ipsam?</p>
+			<!-- Koniec pojemnika nr 2 -->
+
+			<!-- Pojemnik na ramkę tekstową -->
+			<div class="gallery__text-container">
+				<div class="gallery-text-container">
+					<h3 class="gallery-text-container__title">Find all inputs</h3>
+					<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et optio magni ex labore esse quisquam fugiat.</p>
+					<p class="gallery-text-container__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem recusandae optio ipsam?</p>
+				</div>
 			</div>
+			<!-- Koniec ramki tekstowej -->
+
 		</div>
 	</section>
+
 	<!-- PRICE TABLE -->
 	<section class="price-table">
-		<div class="screen-container-clearfix">
+		<div class="price-table__container price-table__container--clearfix">
 			<h2 class="price-table__title">Cennik</h2>
-			
-			<div class="price-tag">
-				<div class="price-tag__circle-big">
-					<div class="price-tag__circle-small"></div>
+
+			<!-- Pojemnik na ramkę z ceną normalną -->
+			<div class="price-table__price-tag">
+				<div class="price-tag">
+					<div class="price-tag__container">
+						<div class="price-tag__circle-big">
+							<div class="price-tag__circle-small"></div>
+						</div>
+						<h3 class="price-tag__title">Basic plan</h3>
+						<div class="price-tag__price-circle">
+							<p class="price-tag__price">85<span class="price-tag__superscript">99</span></p>
+							<p class="price-tag__permonth">pln/msc</p>
+						</div>
+						<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
+						<p class="price-tag__feature">Serwis</p>
+						<button class="price-tag__button">Dołącz</button>
+					</div>
 				</div>
-				<h3 class="price-tag__title">Basic plan</h3>
-				<div class="price-tag__price-circle">
-					<p class="price-tag__price">85<span class="price-tag__superscript">99</span></p>
-					<p class="price-tag__permonth">pln/msc</p>
-				</div>
-				<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
-				<p class="price-tag__feature">Serwis</p>
-				<button class="price-tag__button">Dołącz</button>
 			</div>
+			<!-- Koniec ramki z ceną normalną -->
 
-
-			<div class="price-tag--color">
-				<div class="price-tag__circle-big--color">
-					<div class="price-tag__circle-small--white"></div>
+			<!-- Pojemnik na ramkę z ceną wyróżnioną -->
+			<div class="price-table__price-tag--color">
+				<div class="price-tag">
+					<div class="price-tag__container--color">
+						<div class="price-tag__circle-big--color">
+							<div class="price-tag__circle-small--white"></div>
+						</div>
+						<h3 class="price-tag__title--white">Standard plan</h3>
+						<div class="price-tag__price-circle--color">
+							<p class="price-tag__price--color">95<span class="price-tag__superscript--color">99</span></p>
+							<p class="price-tag__permonth--color">pln/msc</p>
+						</div>
+						<p class="price-tag__feature--light">Zakup towaru + dowóz</p>
+						<p class="price-tag__feature">Serwis</p>
+						<p class="price-tag__feature--light">Gwarancja 5 lat</p>
+						<button class="price-tag__button--white">Dołącz</button>
+					</div>
 				</div>
-				<h3 class="price-tag__title--white">Standard plan</h3>
-				<div class="price-tag__price-circle--color">
-					<p class="price-tag__price--color">95<span class="price-tag__superscript--color">99</span></p>
-					<p class="price-tag__permonth--color">pln/msc</p>
-				</div>
-				<p class="price-tag__feature--light">Zakup towaru + dowóz</p>
-				<p class="price-tag__feature">Serwis</p>
-				<p class="price-tag__feature--light">Gwarancja 5 lat</p>
-				<button class="price-tag__button--white">Dołącz</button>
 			</div>
-			
+			<!-- Koniec ramki z ceną wyróżnioną -->
 
-			<div class="price-tag">
-				<div class="price-tag__circle-big">
-					<div class="price-tag__circle-small"></div>
-				</div>
-				<h3 class="price-tag__title">Advance plan</h3>
-				<div class="price-tag__price-circle">
-					<p class="price-tag__price">211<span class="price-tag__superscript">99</span></p>
-					<p class="price-tag__permonth">pln/msc</p>
-				</div>
-				<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
-				<p class="price-tag__feature">Serwis</p>
-				<p class="price-tag__feature--dark">Gwarancja 5 lat</p>
-				<p class="price-tag__feature">Porady projektanta</p>
-				<button class="price-tag__button">Dołącz</button>
-			</div>	
+			<!-- Pojemnik na ramkę z ceną normalną -->
+			<div class="price-table__price-tag">
+				<div class="price-tag">
+					<div class="price-tag__container">
+						<div class="price-tag__circle-big">
+							<div class="price-tag__circle-small"></div>
+						</div>
+						<h3 class="price-tag__title">Advance plan</h3>
+						<div class="price-tag__price-circle">
+							<p class="price-tag__price">211<span class="price-tag__superscript">99</span></p>
+							<p class="price-tag__permonth">pln/msc</p>
+						</div>
+						<p class="price-tag__feature--dark">Zakup towaru + dowóz</p>
+						<p class="price-tag__feature">Serwis</p>
+						<p class="price-tag__feature--dark">Gwarancja 5 lat</p>
+						<p class="price-tag__feature">Porady projektanta</p>
+						<button class="price-tag__button">Dołącz</button>
+					</div>
+				</div>	
+			</div>
+			<!-- Koniec ramki z ceną normalną -->
+
 		</div>
 	</section>
+
+	<!-- CONFIGURATOR -->
+	<section class="configurator">
+		<div class="configurator__container configurator__container--clearfix">
+			<!-- Panel z listami rozwijanymi konfiguratora -->
+			<div class="configurator__options">
+				<h2 class="configurator__title">Stwórz swoje krzesło</h2>
+				<form action="" class="custom-chair">
+					<select name="chair-type">
+						<option value="1">Wybierz rodzaj</option>
+						<option value="1">Chair Clair</option>
+						<option value="1">Chair Margarita</option>
+						<option value="1">Chair Selena</option>
+					</select>
+					<input type="checkbox" value="transport">Transport
+				</form>
+			</div>
+			<!-- Koniec panelu z listami rozwijanymi -->
+
+			<!-- Panel z grafiką -->
+			<div class="configurator__graphic">
+				
+			</div>
+			<!-- Koniec panelu z grafiką -->
+
+			<!-- Panel z podsumowaniem wybranej konfiguracji -->
+			<div class="configurator__total">
+				<h2 class="configurator__title--right">Podsumowanie</h2>
+
+			</div>
+			<!-- Koniec panelu z podsumowaniem -->
+			
+		</div>
+	</section>
+
 	<!-- FORM -->
 	<section class="contact-form">
-		<div class="screen-container-clearfix">
+		<div class="contact-form__container contact-form__container--clearfix">
 			<h2 class="contact-form__title">Kontakt</h2>
-			<form class="form">
-				<div class="form-left">
-					<input class="form-left__name-input" type="text" name="name" placeholder="Imię">
-					<input class="form-left__email-input" type="email" name="email" placeholder="email">
-					<textarea class="form-left__message-textarea" cols="100" rows="3" placeholder="Wiadomość"></textarea>
-				</div>			
-				<div class="form-right">
-					<img class="form-right__image" src="./images/red_chair.png" alt="Red Chair image">
-					<input class="form-right__checkbox" type="checkbox" name="agree">
-					<label class="form-right__checkbox-label" for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
-					<input class="form-right__button--color" type="submit" value="Wyślij">
-				</div>			
-			</form>
+
+			<!-- Formularz kontaktowy -->
+			<div class="contact-form__form">
+				<form class="form">
+					<div class="form__form-left">
+						<div class="form-left">
+							<input class="form-left__name-input" type="text" name="name" placeholder="Imię">
+							<input class="form-left__email-input" type="email" name="email" placeholder="email">
+							<textarea class="form-left__message-textarea" cols="100" rows="3" placeholder="Wiadomość"></textarea>
+						</div>
+					</div>			
+					<div class="form_form-right">
+						<div class="form-right">
+							<img class="form-right__image" src="./images/red_chair.png" alt="Red Chair image">
+							<input class="form-right__checkbox" type="checkbox" name="agree">
+							<label class="form-right__checkbox-label" for="agree">Zgadzam się na przetwarzanie danych osobowych</label>
+							<input class="form-right__button--color" type="submit" value="Wyślij">
+						</div>
+					</div>
+				</form>
+			</div>
+			<!-- Koniec formularza kontaktowego -->
+
 		</div>
 	</section>
 
 	<!-- FOOTER -->
 	<footer class="footer">
-		<div class="screen-container-clearfix">
-			<p class="copyright">Copyright 2014 | All Rights Reserved &ndash; Sit On Chair</p>
-			<div class="site-logo--dark">
-				<p class="site-logo__normal-text--dark"><a class="site-logo__link--dark" href="#">Sit <strong class="site-logo__bold-text">On</strong> Chair</a></p>
-			</div>	
-			<div class="social-media">
-				<img src="./images/flickr.png" alt="Flickr logo">
-				<img src="./images/vimeo.png" alt="Flickr logo">
-				<img src="./images/pinterest.png" alt="Flickr logo">
-				<img src="./images/twitter.png" alt="Flickr logo">
+		<div class="footer__container footer__container--clearfix">
+			<p class="footer__copyright">Copyright 2014 | All Rights Reserved &ndash; Sit On Chair</p>
+
+			<!-- Pojemnik na logo w stopce -->
+			<div class="footer__site-logo">
+				<div class="site-logo">
+					<p class="site-logo__normal-text--dark"><a class="site-logo__link--dark" href="#">Sit <strong class="site-logo__bold-text">On</strong> Chair</a></p>
+				</div>
 			</div>
+			<!-- Koniec pojemnika na logo -->
+
+			<!-- Pojemnik na ikony social media -->
+			<div class="footer__social-media">
+				<div class="social-media">
+					<img class="social-media__icon" src="./images/flickr.png" alt="Flickr logo">
+					<img class="social-media__icon" src="./images/vimeo.png" alt="Flickr logo">
+					<img class="social-media__icon" src="./images/pinterest.png" alt="Flickr logo">
+					<img class="social-media__icon" src="./images/twitter.png" alt="Flickr logo">
+				</div>
+			</div>
+			<!-- Koniec pojemnika na social media -->
+
 		</div>
 	</footer>
 </body>

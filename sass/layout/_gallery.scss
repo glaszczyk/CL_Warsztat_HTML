@@ -1,17 +1,40 @@
 .gallery {
-	height: $moduleY * 22;
-	padding-top: $moduleY *2;
+	&__container {
+		@include container($desktop-size);
+		height: $moduleY * 22;
+		padding-top: $moduleY *2;
+	}
+	&__container--clearfix {
+		@extend %clearfix::before;
+		@extend %clearfix::after;
+	}
+	&__image-container {
+		float: left;
+		margin-right: 45px;
+		position: relative;
+	}
+	&__text-container {
+		float: left;
+		width: 320px;
+		height: 256px;
+		padding: 16px;
+		border: solid 2px #e4e4e4;
+	}
 }
 .gallery-image-container {
-	float: left;
-	margin-right: 45px;
-	position: relative;
 	&__overlay {
 		background-color: rgba(255, 255, 255, .5);
 		height: 64px;
 		position: absolute;
 		bottom: 16px;
 		width: 320px;
+		opacity: 1;
+		transition: 0.5s;
+	}
+	&__overlay--hidden {
+		@extend .gallery-image-container__overlay;
+		opacity: 0;
+		// display: none;
 	}
 	&__title {
 		font-size: 16px;
@@ -29,11 +52,6 @@
 	}
 }
 .gallery-text-container {
-	float: left;
-	width: 320px;
-	height: 256px;
-	padding: 16px;
-	border: solid 2px #e4e4e4;
 	&__title {
 		font-size: 16px;
 		font-weight: bold;
