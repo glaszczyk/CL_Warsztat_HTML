@@ -4,7 +4,7 @@
 		@include container($desktop-size);
 		height: $moduleY * 48;
 		text-align: center;
-		padding-top: $moduleY * 4;
+		padding-top: $moduleY * 3;
 	}
 	&__container--clearfix {
 		@extend %clearfix::before;
@@ -150,18 +150,19 @@
 
 	&__button,
 	&__button--white {
-		padding: 6px 32px 10px 32px;
+		width: 140px;
+		position: absolute;	
+		padding: 7px 32px 9px 32px;
 		font-size: $fontSize;
 		height: $moduleY * 2;
 		border: none;
 		text-transform: uppercase;
 		letter-spacing: 1px;
-		border-radius: 10px;
+		border-radius: 5px;
 		bottom: $moduleY;
 		right: 0;
 		left: 0;
-		margin: 0 auto;
-		position: absolute;		
+		margin: auto;
 	}
 	&__button {
 		color: $color-light;

@@ -23,7 +23,7 @@
 			font-weight: normal;
 			color: #00cfab;
 			position: absolute;
-			top: 216px;			
+			top: 216px;
 		}
 		&--previous {
 			left: 0;
@@ -35,22 +35,6 @@
 	&__slide-item {
 		clear: both;
 		position: relative;
-		// &::before,
-		// &::after {
-		// 	font-size: $fontSize * 4;
-		// 	font-weight: normal;
-		// 	color: #00cfab;
-		// 	position: absolute;
-		// 	top: 216px;
-		// }
-		// &::before {
-		// 	content: "<";
-		// 	left: 0;
-		// }
-		// &::after {
-		// 	content: ">";
-		// 	right: -2px;	
-		// }
 	}
 	&__slide-item--hidden {
 		display: none;
@@ -78,6 +62,7 @@
 	}
 }
 .slide-text-container {
+	position: relative;
 	&__headline {
 		font-size: $moduleX;
 		text-transform: uppercase;
@@ -95,8 +80,9 @@
 		text-align: center;
 		height: 128px;
 	}
-	&__button, [class*="__button"] {
-		position: absolute;
+	&__button, 
+	[class *= "__button"] {
+		width: 205px;
 		top: $moduleY * 12;
 		left: 0;
 		right: 0;

@@ -2,7 +2,7 @@
 	&__container {
 		@include container($desktop-size);
 		height: $moduleY * 34;
-		padding-top: ($moduleY * 2) - 3;
+		padding-top: $moduleY * 3;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -20,11 +20,159 @@
 	&__options {
 		@include column(320px);
 	}
-	&__graphic {
+	&__custom-chair {
+		margin-top: 64px;
+	}
+	&__graphic-container {
 		@include column(320px);
+		align-self: center;
+	}
+	&__image {
+		margin-left: 20px;
 	}
 	&__total {
 		@include column(320px);
 	}
+	&__prices {
+		margin-top: 64px;
+		border: solid 2px $color-primary;
+	}
+	&__button--color {
+		border: none;
+		margin-top: 38px;
+		text-align: center;
+		text-decoration: none;
+		font-size: 24px;
+		line-height: 64px;
+		border-radius: 5px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		width: 320px;
+		font-family: 'Raleway', Arial, sans-serif;
+		font-weight: 500;
+		background: $color-primary;
+		color: $color-light;
+	}
 
+}
+
+.custom-chair {
+	&__list {
+		border-radius: 0;
+		appearance: none;
+		background: url("../../images/arrow-down-b.svg") center right / 40px 40px no-repeat;
+		width: 100%;
+		height: 64px;
+		margin-bottom: 32px;
+		border: solid 2px $color-primary;
+		font-size: 24px;
+		padding-left: 16px;
+		font-family: 'Raleway', Arial, sans-serif;
+		font-weight: 500;
+		color: map-get($greyscale-map, "grey5");
+	}
+	&__checkbox {
+		visibility: hidden;
+		&-label {
+			position: relative;
+			margin-left: 24px;
+			font-size: 24px;
+			font-family: 'Raleway', Arial, sans-serif;
+			font-weight: 500;
+			color: map-get($greyscale-map, "grey4");
+			&:before {
+				content: '';
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				left: -40px;
+				top: -2px;
+				background-color: map-get($greyscale-map, "grey4");
+			}
+			&:after {
+				content: '';
+				width: 26px;
+				height: 26px;
+				position: absolute;
+				left: -37px;
+				top: 1px;
+				background-color: map-get($greyscale-map, "grey1");
+			}
+		}
+	}
+	&__checkbox:checked + &__checkbox-label {
+		position: relative;
+		margin-left: 24px;
+		font-size: 24px;
+		font-family: 'Raleway', Arial, sans-serif;
+		font-weight: 500;
+		color: map-get($greyscale-map, "grey5");
+		&:before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			left: -40px;
+			top: -2px;
+			background-color: map-get($greyscale-map, "grey4");
+		}
+		&:after {
+			content: '';
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			left: -37px;
+			top: 1px;
+			border: 3px solid map-get($greyscale-map, "grey1");
+			background-color: $color-primary;
+		}
+	}
+	&__checkbox:not(checked) {
+		color: map-get($greyscale-map, "grey5");
+	}
+
+}
+
+.prices {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	&__name,
+	&__name--color,
+	&__price,
+	&__price--color {
+		height: 32px;
+		margin-top: 16px;
+		margin-bottom: 14px;
+		font-size: 24px;
+		padding-left: 16px;
+		font-family: 'Raleway', Arial, sans-serif;
+		font-weight: 500;
+		color: map-get($greyscale-map, "grey5");
+	}
+	&__name,
+	&__name--color {
+		width: 60%;
+	}
+	&__name--color {
+		font-weight: bold;
+		color: $color-primary;
+	}
+	&__price,
+	&__price--color {
+		width: 40%;
+		text-align: right;
+		padding-right: 16px;
+	}
+	&__price--color {
+		font-weight: bold;
+		color: $color-primary;
+	}
+	&__separator {
+		width: 100%;
+		border: 0;
+		height: 2px;
+		margin: 2px 16px 0 16px;
+		background-color: map-get($greyscale-map, "grey4");
+	}
 }
